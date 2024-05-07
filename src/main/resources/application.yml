@@ -16,9 +16,9 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8090/realms/modulo_base
+          issuer-uri: http://localhost:8090/realms/modulo.base
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
-          client-id: app_modulo_base
+          client-id: app_modulo.base
   datasource:
     url: jdbc:mysql://${mysql.url}/${mysql.schema}?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8
     username: ${mysql.username}

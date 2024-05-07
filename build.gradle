@@ -69,7 +69,7 @@ dependencies {
 }
 
 flyway {
-	url = System.getenv('FLYWAY_DB') ?: 'jdbc:mysql://localhost:3306/modulo_base?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8'
+	url = System.getenv('FLYWAY_DB') ?: 'jdbc:mysql://localhost:3306/modulo.base?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8'
 	user = System.getenv('FLYWAY_USER') ?: 'root'
 	password = System.getenv('FLYWAY_PASSWORD') ?: '123456'
 }
