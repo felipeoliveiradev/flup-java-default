@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Auth.system.utils;
+package com.modulo.base.modules.Auth.system.utils;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.authentication.AbstractAuthenticationToken;

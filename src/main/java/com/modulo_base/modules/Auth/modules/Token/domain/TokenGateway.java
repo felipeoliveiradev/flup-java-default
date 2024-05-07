@@ -1,5 +1,4 @@
-package com.modulo_base.modules.Auth.modules.Token.domain;
-
+package com.modulo.base.modules.Auth.modules.Token.domain;
 
 public interface TokenGateway {
     Token create(String username, String password);

@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.utils;
+package com.modulo.base.modules.Flup.system.utils;
 
 import com.rabbitmq.client.*;
 
@@ -20,7 +20,8 @@ public class RabbitMQUtils {
         factory.setPassword(password);
     }
 
-    public static RabbitMQUtils connect(String host, int port, String username, String password) throws IOException, TimeoutException {
+    public static RabbitMQUtils connect(String host, int port, String username, String password)
+            throws IOException, TimeoutException {
         RabbitMQUtils rabbitMQUtils = new RabbitMQUtils(host, port, username, password);
         rabbitMQUtils.connection = rabbitMQUtils.factory.newConnection();
         rabbitMQUtils.channel = rabbitMQUtils.connection.createChannel();
@@ -167,7 +168,8 @@ public class RabbitMQUtils {
             return this;
         }
 
-        public Builder startRealtimeQueueMonitoring(String queueName, MessageHandler messageHandler, Integer timeTread) throws IOException {
+        public Builder startRealtimeQueueMonitoring(String queueName, MessageHandler messageHandler, Integer timeTread)
+                throws IOException {
             rabbitMQUtils.startRealtimeQueueMonitoring(queueName, messageHandler, timeTread);
             return this;
         }
@@ -182,7 +184,8 @@ public class RabbitMQUtils {
             return this;
         }
 
-        public Builder createDeliverCallback(RabbitMQUtils.MessageHandler messageHandler) throws IOException, TimeoutException {
+        public Builder createDeliverCallback(RabbitMQUtils.MessageHandler messageHandler)
+                throws IOException, TimeoutException {
             rabbitMQUtils.createDeliverCallback(messageHandler);
             return this;
         }

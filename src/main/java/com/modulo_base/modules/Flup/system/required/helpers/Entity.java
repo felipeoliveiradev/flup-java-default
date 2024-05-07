@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Flup.system.required.helpers;
+package com.modulo.base.modules.Flup.system.required.helpers;
 
-import com.modulo_base.modules.Flup.system.validation.handlers.ValidationHandler;
+import com.modulo.base.modules.Flup.system.validation.handlers.ValidationHandler;
 
 import java.util.Objects;
 
@@ -21,8 +21,10 @@ public abstract class Entity<ID extends Identifier> {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         final Entity<?> entity = (Entity<?>) o;
         return Objects.equals(getId(), entity.getId());
     }

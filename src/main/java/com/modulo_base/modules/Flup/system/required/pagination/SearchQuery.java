@@ -1,10 +1,9 @@
-package com.modulo_base.modules.Flup.system.required.pagination;
+package com.modulo.base.modules.Flup.system.required.pagination;
 
 public record SearchQuery(
-        int page,
-        int perPage,
-        String terms,
-        String sort,
-        String direction
-) {
+                int page,
+                int perPage,
+                String terms,
+                String sort,
+                String direction) {
 }

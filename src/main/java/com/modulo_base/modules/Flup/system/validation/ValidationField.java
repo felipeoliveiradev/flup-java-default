@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.validation;
+package com.modulo.base.modules.Flup.system.validation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +61,8 @@ public class ValidationField<T> {
     }
 
     public ValidationField<T> Password() {
-        return Custom("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$", String.format("'%s' should be a valid password", field));
+        return Custom("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$",
+                String.format("'%s' should be a valid password", field));
     }
 
     public ValidationField<T> Username() {
@@ -69,7 +70,8 @@ public class ValidationField<T> {
     }
 
     public ValidationField<T> Url() {
-        return Custom("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]$", String.format("'%s' should be a valid URL", field));
+        return Custom("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]$",
+                String.format("'%s' should be a valid URL", field));
     }
 
     public ValidationField<T> Name() {

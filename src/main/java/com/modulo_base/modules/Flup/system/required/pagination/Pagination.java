@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.required.pagination;
+package com.modulo.base.modules.Flup.system.required.pagination;
 
 import java.util.List;
 import java.util.function.Function;
@@ -7,8 +7,7 @@ public record Pagination<T>(
         int currentPage,
         int perPage,
         long total,
-        List<T> items
-) {
+        List<T> items) {
     public <R> Pagination<R> map(final Function<T, R> mapper) {
         final List<R> aNewList = this.items.stream()
                 .map(mapper)

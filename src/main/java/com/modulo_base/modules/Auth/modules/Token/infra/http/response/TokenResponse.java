@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Auth.modules.Token.infra.http.response;
+package com.modulo.base.modules.Auth.modules.Token.infra.http.response;
 
-import com.modulo_base.modules.Auth.modules.Token.domain.Token;
+import com.modulo.base.modules.Auth.modules.Token.domain.Token;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record TokenResponse(
@@ -21,7 +21,6 @@ public record TokenResponse(
                 aToken.getRefreshToken(),
                 aToken.getTokenType(),
                 aToken.getNotBeforePolicy(),
-                aToken.getScope()
-        );
+                aToken.getScope());
     }
 }

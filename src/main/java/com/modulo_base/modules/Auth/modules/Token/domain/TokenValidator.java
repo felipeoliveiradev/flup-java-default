@@ -1,9 +1,9 @@
-package com.modulo_base.modules.Auth.modules.Token.domain;
+package com.modulo.base.modules.Auth.modules.Token.domain;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
-import com.modulo_base.modules.Flup.system.validation.ValidationField;
-import com.modulo_base.modules.Flup.system.validation.Validator;
-import com.modulo_base.modules.Flup.system.validation.handlers.ValidationHandler;
+import com.modulo.base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.ValidationField;
+import com.modulo.base.modules.Flup.system.validation.Validator;
+import com.modulo.base.modules.Flup.system.validation.handlers.ValidationHandler;
 
 public class TokenValidator extends Validator {
     private final Token Token;
@@ -24,64 +24,64 @@ public class TokenValidator extends Validator {
         this.scopeValidation();
     }
 
-
     public void accessTokenValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("accessToken", this.Token.getAccessToken()).Null().Min(3).validate());
+            this.validationHandler().appendList(
+                    new ValidationField("accessToken", this.Token.getAccessToken()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
-
 
     public void expiresInValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("expiresIn", this.Token.getExpiresIn()).Null().Min(3).validate());
+            this.validationHandler()
+                    .appendList(new ValidationField("expiresIn", this.Token.getExpiresIn()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
-
 
     public void refreshExpiresInValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("refreshExpiresIn", this.Token.getRefreshExpiresIn()).Null().Min(3).validate());
+            this.validationHandler().appendList(
+                    new ValidationField("refreshExpiresIn", this.Token.getRefreshExpiresIn()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
-
 
     public void refreshTokenValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("refreshToken", this.Token.getRefreshToken()).Null().Min(3).validate());
+            this.validationHandler().appendList(
+                    new ValidationField("refreshToken", this.Token.getRefreshToken()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
-
 
     public void tokenTypeValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("tokenType", this.Token.getTokenType()).Null().Min(3).validate());
+            this.validationHandler()
+                    .appendList(new ValidationField("tokenType", this.Token.getTokenType()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
-
 
     public void notBeforePolicyValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("notBeforePolicy", this.Token.getNotBeforePolicy()).Null().Min(1).validate());
+            this.validationHandler().appendList(
+                    new ValidationField("notBeforePolicy", this.Token.getNotBeforePolicy()).Null().Min(1).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }
     }
 
-
     public void scopeValidation() {
         try {
-            this.validationHandler().appendList(new ValidationField("scope", this.Token.getScope()).Null().Min(3).validate());
+            this.validationHandler()
+                    .appendList(new ValidationField("scope", this.Token.getScope()).Null().Min(3).validate());
         } catch (Exception Err) {
             this.validationHandler().append(new Error(Err.getMessage()));
         }

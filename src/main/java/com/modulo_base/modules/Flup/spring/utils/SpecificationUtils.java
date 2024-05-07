@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Flup.spring.utils;
+package com.modulo.base.modules.Flup.spring.utils;
 
-import com.modulo_base.modules.Flup.system.utils.SqlUtils;
+import com.modulo.base.modules.Flup.system.utils.SqlUtils;
 import org.springframework.data.jpa.domain.Specification;
 
 public final class SpecificationUtils {

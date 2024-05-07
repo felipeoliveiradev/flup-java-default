@@ -15,7 +15,7 @@ plugins {
 	id 'org.flywaydb.flyway' version '8.5.10'
 }
 
-group = 'com.modulo_base'
+group = 'com.modulo.base'
 version = '1.0'
 
 bootJar{

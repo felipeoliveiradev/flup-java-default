@@ -1,10 +1,10 @@
-package com.modulo_base.modules.Auth.modules.Token.infra.frameworks.spring;
+package com.modulo.base.modules.Auth.modules.Token.infra.frameworks.spring;
 
-import com.modulo_base.modules.Auth.modules.Token.application.create.CreateTokenUseCase;
-import com.modulo_base.modules.Auth.modules.Token.application.create.DefaultCreateTokenUseCase;
-import com.modulo_base.modules.Auth.modules.Token.application.update.DefaultUpdateTokenUseCase;
-import com.modulo_base.modules.Auth.modules.Token.application.update.UpdateTokenUseCase;
-import com.modulo_base.modules.Auth.modules.Token.domain.TokenGateway;
+import com.modulo.base.modules.Auth.modules.Token.application.create.CreateTokenUseCase;
+import com.modulo.base.modules.Auth.modules.Token.application.create.DefaultCreateTokenUseCase;
+import com.modulo.base.modules.Auth.modules.Token.application.update.DefaultUpdateTokenUseCase;
+import com.modulo.base.modules.Auth.modules.Token.application.update.UpdateTokenUseCase;
+import com.modulo.base.modules.Auth.modules.Token.domain.TokenGateway;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

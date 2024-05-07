@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Flup.system.validation.Exceptions;
+package com.modulo.base.modules.Flup.system.validation.Exceptions;
 
-// package com.modulo_base.modules.flup.system.validation.Exceptions;
+// package com.modulo.base.modules.flup.system.validation.Exceptions;
 //
 //
 // public class ConstraintViolationException extends

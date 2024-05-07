@@ -1,8 +1,8 @@
-package com.modulo_base.modules.Flup.spring.exception;
+package com.modulo.base.modules.Flup.spring.exception;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
-import com.modulo_base.modules.Flup.system.validation.Exceptions.DomainException;
-import com.modulo_base.modules.Flup.system.validation.Exceptions.NotFoundException;
+import com.modulo.base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.Exceptions.DomainException;
+import com.modulo.base.modules.Flup.system.validation.Exceptions.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,22 +13,17 @@ import java.util.List;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-
     @ExceptionHandler(value = NotFoundException.class)
     public ResponseEntity<?> handlerNotFoundException(
-            final DomainException ex
-    ) {
+            final DomainException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiError.from(ex));
     }
 
-
     @ExceptionHandler(value = DomainException.class)
     public ResponseEntity<?> handlerDomainException(
-            final DomainException ex
-    ) {
+            final DomainException ex) {
         return ResponseEntity.unprocessableEntity().body(ApiError.from(ex));
     }
-
 
     record ApiError(String message, List<Error> errors) {
         static ApiError from(final DomainException ex) {

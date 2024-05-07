@@ -1,7 +1,7 @@
-package com.modulo_base.modules.Flup.system.validation.handlers;
+package com.modulo.base.modules.Flup.system.validation.handlers;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
-import com.modulo_base.modules.Flup.system.validation.Exceptions.DomainException;
+import com.modulo.base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.Exceptions.DomainException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,6 @@ public class Notification implements ValidationHandler {
     public void appendList(final List<Error> anError) {
         this.errors.addAll(anError);
     }
-
 
     @Override
     public void append(final ValidationHandler anHandler) {

@@ -1,7 +1,7 @@
-package com.modulo_base.modules.Auth.modules.Token.application.update;
+package com.modulo.base.modules.Auth.modules.Token.application.update;
 
-import com.modulo_base.modules.Auth.modules.Token.domain.TokenGateway;
-import com.modulo_base.modules.Flup.system.validation.handlers.Notification;
+import com.modulo.base.modules.Auth.modules.Token.domain.TokenGateway;
+import com.modulo.base.modules.Flup.system.validation.handlers.Notification;
 import io.vavr.control.Either;
 
 import java.util.Objects;

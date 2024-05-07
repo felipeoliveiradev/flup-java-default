@@ -1,8 +1,7 @@
-package com.modulo_base.modules.Flup.system.validation;
+package com.modulo.base.modules.Flup.system.validation;
 
-
-import com.modulo_base.modules.Flup.system.validation.Exceptions.DomainException;
-import com.modulo_base.modules.Flup.system.validation.handlers.ValidationHandler;
+import com.modulo.base.modules.Flup.system.validation.Exceptions.DomainException;
+import com.modulo.base.modules.Flup.system.validation.handlers.ValidationHandler;
 
 import java.util.List;
 

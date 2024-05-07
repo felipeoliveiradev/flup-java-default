@@ -1,7 +1,6 @@
-package com.modulo_base.modules.Auth.modules.Token.domain;
+package com.modulo.base.modules.Auth.modules.Token.domain;
 
-
-import com.modulo_base.modules.Flup.system.required.helpers.Identifier;
+import com.modulo.base.modules.Flup.system.required.helpers.Identifier;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -9,7 +8,6 @@ import java.util.UUID;
 public class TokenID extends Identifier {
 
     private final String value;
-
 
     public TokenID(final String value) {
         Objects.requireNonNull(value);
@@ -35,8 +33,10 @@ public class TokenID extends Identifier {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         final TokenID that = (TokenID) o;
         return Objects.equals(getValue(), that.getValue());
     }

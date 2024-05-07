@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.required.utils;
+package com.modulo.base.modules.Flup.system.required.utils;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

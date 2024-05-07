@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.spring;
+package com.modulo.base.modules.Flup.spring;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,7 +12,6 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 import java.util.concurrent.Callable;
 
-
 public enum Json {
     INSTANCE;
 
@@ -22,8 +21,7 @@ public enum Json {
                     DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
                     DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES,
                     DeserializationFeature.FAIL_ON_NULL_CREATOR_PROPERTIES,
-                    SerializationFeature.WRITE_DATES_AS_TIMESTAMPS
-            )
+                    SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
             .modules(new JavaTimeModule(), new Jdk8Module(), afterburnerModule())
             .propertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
             .build();

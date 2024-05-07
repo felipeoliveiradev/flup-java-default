@@ -1,10 +1,10 @@
-package com.modulo_base.modules.Auth.modules.Token.infra.frameworks.spring.gateway;
+package com.modulo.base.modules.Auth.modules.Token.infra.frameworks.spring.gateway;
 
-import com.modulo_base.modules.Auth.modules.Token.domain.Token;
+import com.modulo.base.modules.Auth.modules.Token.domain.Token;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TokenGateway implements com.modulo_base.modules.Auth.modules.Token.domain.TokenGateway {
+public class TokenGateway implements com.modulo.base.modules.Auth.modules.Token.domain.TokenGateway {
     TokenGatewayImplementation tokenGatewayImplementation;
 
     public TokenGateway(final TokenGatewayImplementation tokenGatewayImplementation) {
@@ -22,8 +22,7 @@ public class TokenGateway implements com.modulo_base.modules.Auth.modules.Token.
                 test.refreshToken(),
                 test.tokenType(),
                 test.notBeforePolicy(),
-                test.scope()
-        );
+                test.scope());
     }
 
     @Override
@@ -36,7 +35,6 @@ public class TokenGateway implements com.modulo_base.modules.Auth.modules.Token.
                 test.refreshToken(),
                 test.tokenType(),
                 test.notBeforePolicy(),
-                test.scope()
-        );
+                test.scope());
     }
 }

@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Auth.modules.Token.infra.frameworks.spring.gateway;
+package com.modulo.base.modules.Auth.modules.Token.infra.frameworks.spring.gateway;
 
-import com.modulo_base.modules.Auth.modules.Token.infra.http.response.TokenResponse;
+import com.modulo.base.modules.Auth.modules.Token.infra.http.response.TokenResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -41,8 +41,9 @@ public class TokenGatewayImplementation implements ITokenGateway {
         RestTemplate restTemplate = new RestTemplate();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         formData.add("client_id", clientId);
-        HttpEntity<LinkedMultiValueMap<String, String>> entity
-                = new HttpEntity<LinkedMultiValueMap<String, String>>(formData, headers);
-        return restTemplate.postForEntity("%s/protocol/openid-connect/token".formatted(url), entity, TokenResponse.class);
+        HttpEntity<LinkedMultiValueMap<String, String>> entity = new HttpEntity<LinkedMultiValueMap<String, String>>(
+                formData, headers);
+        return restTemplate.postForEntity("%s/protocol/openid-connect/token".formatted(url), entity,
+                TokenResponse.class);
     }
 }

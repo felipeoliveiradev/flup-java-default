@@ -1,9 +1,8 @@
-package com.modulo_base.modules.Flup.system.validation.Exceptions;
+package com.modulo.base.modules.Flup.system.validation.Exceptions;
 
-
-import com.modulo_base.modules.Flup.system.required.helpers.AggregateRoot;
-import com.modulo_base.modules.Flup.system.required.helpers.Identifier;
-import com.modulo_base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.required.helpers.AggregateRoot;
+import com.modulo.base.modules.Flup.system.required.helpers.Identifier;
+import com.modulo.base.modules.Flup.system.validation.Error;
 
 import java.util.Collections;
 import java.util.List;
@@ -15,8 +14,7 @@ public class NotFoundException extends DomainException {
 
     public static NotFoundException with(
             final Class<? extends AggregateRoot<?>> anAggragate,
-            final Identifier id
-    ) {
+            final Identifier id) {
 
         final var anError = "%s with ID %s was not found".formatted(anAggragate.getSimpleName(), id.getValue());
         return new NotFoundException(anError, Collections.emptyList());

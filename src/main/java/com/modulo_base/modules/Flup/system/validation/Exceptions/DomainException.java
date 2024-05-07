@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Flup.system.validation.Exceptions;
+package com.modulo.base.modules.Flup.system.validation.Exceptions;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.Error;
 
 import java.util.List;
 

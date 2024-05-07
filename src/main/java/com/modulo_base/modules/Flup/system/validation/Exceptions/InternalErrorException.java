@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.validation.Exceptions;
+package com.modulo.base.modules.Flup.system.validation.Exceptions;
 
 public class InternalErrorException extends NoStacktraceException {
 

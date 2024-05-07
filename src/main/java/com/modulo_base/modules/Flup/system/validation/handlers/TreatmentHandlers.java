@@ -1,6 +1,6 @@
-package com.modulo_base.modules.Flup.system.validation.handlers;
+package com.modulo.base.modules.Flup.system.validation.handlers;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.Error;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -21,7 +21,8 @@ public class TreatmentHandlers {
     private String handlerConstrain() {
         if (this.message.contains("org.hibernate.exception.ConstraintViolationException")) {
             var listArray = new ArrayList<>();
-            listArray.add(Arrays.stream(StringUtils.substringsBetween(this.message, "[", "]")).collect(Collectors.toList()));
+            listArray.add(
+                    Arrays.stream(StringUtils.substringsBetween(this.message, "[", "]")).collect(Collectors.toList()));
             return "There is already %s".formatted(listArray.get(0).toString().split(",\\s*")[1]).replace("]", "");
         }
         return this.message;

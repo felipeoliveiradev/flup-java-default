@@ -1,7 +1,6 @@
-package com.modulo_base.modules.Auth.modules.Token.domain;
+package com.modulo.base.modules.Auth.modules.Token.domain;
 
-
-import com.modulo_base.modules.Flup.system.validation.handlers.ValidationHandler;
+import com.modulo.base.modules.Flup.system.validation.handlers.ValidationHandler;
 
 public class Token implements Cloneable {
     private String accessToken;
@@ -19,8 +18,7 @@ public class Token implements Cloneable {
             final String refreshTokenField,
             final String tokenTypeField,
             final String notBeforePolicyField,
-            final String scopeField
-    ) {
+            final String scopeField) {
         this.accessToken = accessTokenField;
         this.expiresIn = expiresInField;
         this.refreshExpiresIn = refreshExpiresInField;
@@ -30,7 +28,6 @@ public class Token implements Cloneable {
         this.scope = scopeField;
     }
 
-
     public static Token newToken(
             final String accessTokenField,
             final String expiresInField,
@@ -38,8 +35,7 @@ public class Token implements Cloneable {
             final String refreshTokenField,
             final String tokenTypeField,
             final String notBeforePolicyField,
-            final String scopeField
-    ) {
+            final String scopeField) {
         return new Token(
                 accessTokenField,
                 expiresInField,
@@ -47,13 +43,11 @@ public class Token implements Cloneable {
                 refreshTokenField,
                 tokenTypeField,
                 notBeforePolicyField,
-                scopeField
-        );
+                scopeField);
     }
 
     public static Token with(
-            final Token aToken
-    ) {
+            final Token aToken) {
         return with(
                 aToken.accessToken,
                 aToken.expiresIn,
@@ -61,8 +55,7 @@ public class Token implements Cloneable {
                 aToken.refreshToken,
                 aToken.tokenType,
                 aToken.notBeforePolicy,
-                aToken.scope
-        );
+                aToken.scope);
     }
 
     public static Token with(
@@ -72,8 +65,7 @@ public class Token implements Cloneable {
             final String refreshToken,
             final String tokenType,
             final String notBeforePolicy,
-            final String scope
-    ) {
+            final String scope) {
         return new Token(
                 accessToken,
                 expiresIn,
@@ -97,8 +89,7 @@ public class Token implements Cloneable {
             final String refreshTokenField,
             final String tokenTypeField,
             final String notBeforePolicyField,
-            final String scopeField
-    ) {
+            final String scopeField) {
         return new Token(
                 accessTokenField,
                 expiresInField,
@@ -106,10 +97,8 @@ public class Token implements Cloneable {
                 refreshTokenField,
                 tokenTypeField,
                 notBeforePolicyField,
-                scopeField
-        );
+                scopeField);
     }
-
 
     public String getAccessToken() {
         return accessToken;
@@ -138,6 +127,5 @@ public class Token implements Cloneable {
     public String getScope() {
         return scope;
     }
-
 
 }

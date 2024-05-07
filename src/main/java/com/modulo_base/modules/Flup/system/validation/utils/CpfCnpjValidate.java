@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.validation.utils;
+package com.modulo.base.modules.Flup.system.validation.utils;
 
 import java.util.ArrayList;
 import java.util.List;

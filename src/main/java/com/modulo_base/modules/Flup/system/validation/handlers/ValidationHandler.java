@@ -1,13 +1,12 @@
-package com.modulo_base.modules.Flup.system.validation.handlers;
+package com.modulo.base.modules.Flup.system.validation.handlers;
 
-import com.modulo_base.modules.Flup.system.validation.Error;
+import com.modulo.base.modules.Flup.system.validation.Error;
 
 import java.util.List;
 
 public interface ValidationHandler {
 
     ValidationHandler append(Error anError);
-
 
     void appendList(List<Error> anError);
 

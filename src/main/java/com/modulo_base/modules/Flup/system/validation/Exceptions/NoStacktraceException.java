@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.validation.Exceptions;
+package com.modulo.base.modules.Flup.system.validation.Exceptions;
 
 public class NoStacktraceException extends RuntimeException {
     public NoStacktraceException(final String message) {
@@ -9,4 +9,3 @@ public class NoStacktraceException extends RuntimeException {
         super(message, cause, true, false);
     }
 }
-

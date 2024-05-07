@@ -1,4 +1,4 @@
-package com.modulo_base.modules.Flup.system.utils;
+package com.modulo.base.modules.Flup.system.utils;
 
 public final class SqlUtils {
 
@@ -6,13 +6,14 @@ public final class SqlUtils {
     }
 
     public static String upper(final String term) {
-        if (term == null) return null;
+        if (term == null)
+            return null;
         return term.toUpperCase();
     }
 
     public static String like(final String term) {
-        if (term == null) return null;
+        if (term == null)
+            return null;
         return "%" + term + "%";
     }
 }
-

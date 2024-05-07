@@ -1,6 +1,6 @@
-package com.modulo_base;
+package com.modulo.base;
 
-import com.modulo_base.modules.Flup.spring.configs.WebServerConfig;
+import com.modulo.base.modules.Flup.spring.configs.WebServerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
